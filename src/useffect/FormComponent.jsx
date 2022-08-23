@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { MsgComponent } from './MsgComponent';
 
 export const FormComponent = () => {
 
     const [formState, setFormState] = useState({
-        username: 'user',
+        username: 'alangobe',
         email: 'example@email.com',
     })
 
@@ -17,25 +18,25 @@ export const FormComponent = () => {
             ...formState,                     // Con el operador spread mantengo el estado que no cambia de formState
             [ name ]: value                   // Según el input en que se cambie su valor se asigna el nuevo valor que se escribe ej: [username]: value ó [email]: value y se cambia
         });
-        console.log({name, value})            
+        // console.log({name, value})            
     }
 
     useEffect( () => {
-        console.log('useEffect invocado xdd');
+        // console.log('Componente montado');
     }, []);                                       // Cuando al useEffect se le manda un arreglo vacío significa que se quiere que el useEffect se ejecute una vez se monta el componente.
                                                   // Osea, una única vez cuando el componente se monta mas no cuando se renderiza de nuevo :D   
     useEffect( () => {
-        console.log('formState cambiado');
+        // console.log('formState cambiado');
     }, [ formState ])                               // Aquí el useEffect va a estar pendiente de lo que ocurra con formState, siempre que este cambie se ejecutará el useEffect
                                                   // según react se recomienda hacer useEffects pequeños que no abarquen muchos datos y que sean especializados en ciertos atributos  
     useEffect(() => {
-        console.log('Email cambiado');
+        // console.log('Email cambiado');
     }, [ email ])                                 // Como está des-estructurado el email y el username se puede invocar de esa forma
 
     useEffect(() => {
-        console.log('Username cambiado');
+        // console.log('Username cambiado');
     }, [ username ])                              // Igual el username :D
-
+    
 
     return (
         
@@ -58,6 +59,11 @@ export const FormComponent = () => {
                 value={ email }
                 onChange={ onInputChange }          // Lo mismo con el email
             />
+
+            {
+                (username === 'subotai') && <MsgComponent />
+            }
+
             <hr />
         </>
 

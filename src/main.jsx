@@ -10,10 +10,12 @@ import './index.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  // <React.StrictMode>
+  <>
     <HooksApp />
     <CounterApp />
     <CounterHook />
     <FormComponent />
-  </React.StrictMode>
+  </>
+  // </React.StrictMode>
 )
