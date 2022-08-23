@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { HooksApp } from './HooksApp';
 import { CounterApp } from './usestate/CounterApp';
 import { CounterHook } from './usestate/CounterHook';
+import { FormComponent } from './useffect/FormComponent';
 import './index.css';
+
 
 
 
@@ -12,5 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <HooksApp />
     <CounterApp />
     <CounterHook />
+    <FormComponent />
   </React.StrictMode>
 )
