@@ -5,7 +5,7 @@ import { useForm } from '../hooks/useForm'
 
 export const FormHook = () => {
     
-    const { formState, onInputChange, username, email, password } = useForm({         // Aquí llamo a los atributos que le asigno al useForm para definirlos
+    const { formState, onInputChange, onResetForm, username, email, password } = useForm({         // Aquí llamo a los atributos que le asigno al useForm para definirlos
         username: '',
         email: '',
         password: ''
@@ -42,6 +42,10 @@ export const FormHook = () => {
                 value={ password }
                 onChange={ onInputChange }          
             />
+
+            <button onClick={ onResetForm } className='btn btn-warning mt-2'>
+                Reset
+            </button>
 
             <hr />
         </>

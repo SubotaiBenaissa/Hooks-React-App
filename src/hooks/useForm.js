@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const useForm = (initialForm = {}) => {
+export const useForm = ( initialForm = {} ) => {
 
     const [ formState, setFormState ] = useState( initialForm );
 
@@ -13,11 +13,16 @@ export const useForm = (initialForm = {}) => {
         });
         // console.log({name, value})            
     }
+   
+    const onResetForm = () => {
+        setFormState( initialForm );                    // Esta es mi solcuión bn cexo xd
+    }
   
     return {
         ...formState,                                   // Esta es otra forma de devolver los atributos que se asignen al useForm en el componente que lo usa
         formState,
         onInputChange,
+        onResetForm
     }
 
 }
