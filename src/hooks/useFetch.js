@@ -23,7 +23,7 @@ export const useFetch = ( url ) => {
             data: data,
             isLoading: false
         })
-        console.log(data)
+        
     }
 
     useEffect(() => {

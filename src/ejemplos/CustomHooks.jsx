@@ -1,6 +1,6 @@
 import React from 'react'
-import { useCounter } from '../hooks/useCounter';
-import { useFetch } from '../hooks/useFetch';
+import { useCounter, useFetch } from '../hooks';
+import { LoadComponent, QuoteComponent } from './';
 
 export const CustomHooks = () => {
 
@@ -9,8 +9,6 @@ export const CustomHooks = () => {
     const {data, isLoading, hasError} = useFetch(`https://www.breakingbadapi.com/api/quotes/${counter}`);
 
     const { author, quote } = !!data && data[0];
-
-    console.log({ author, quote });
 
     // console.log({data, isLoading, hasError});
 
@@ -27,17 +25,10 @@ export const CustomHooks = () => {
 
             {
                 (isLoading) ? (
-                    <div className='alert aletr-info text-center'>
-                        Cargando...
-                    </div>
+                    <LoadComponent />
                 ) 
                 : (
-                    <blockquote className='blockquote text-end'>
-                        <p className='mb-1'>
-                            { quote }
-                        </p>
-                        <footer className='blockquote-footer mt-2'> { author } </footer>
-                    </blockquote>
+                    <QuoteComponent author={ author } quote={ quote }/>
                 )
             }
 
