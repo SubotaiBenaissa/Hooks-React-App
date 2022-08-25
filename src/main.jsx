@@ -7,8 +7,11 @@ import { FormComponent, FormHook } from './useffect';
 import { CustomHooks } from './ejemplos';
 import { RefComponent } from './useref/RefComponent';
 import { LayoutComponent } from './uselayouteffect/LayoutComponent';
+import { MemoComponent, MemoHook } from './memos';
 
 import './index.css';
+
+
 
 
 
@@ -23,6 +26,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <CustomHooks />
     <RefComponent />
     <LayoutComponent />
+    <MemoComponent />
+    <MemoHook />
   </>
   </React.StrictMode>
 )
