@@ -12,10 +12,10 @@ const heavyStuff = ( item = 1000 ) => {
 
 export const MemoHook = () => {
 
-    const { counter, increment, decrement } = useCounter(4000);
+    const { counter, increment, decrement } = useCounter(400);
     const [ show, setShow ] = useState(true);
 
-    const memoValue = useMemo(() => heavyStuff(counter), [counter]);     //Siempre que no vambie counter se memoriza el valor devuelto por la función heavyStuff
+    const memoValue = useMemo(() => heavyStuff(counter), [counter]);     //Siempre que no cambie counter se memoriza el valor devuelto por la función heavyStuff
 
     return (
         <>
@@ -25,6 +25,7 @@ export const MemoHook = () => {
             <button className='btn btn-warning' onClick={ () => increment(1) }>+1</button>
             <button className='btn btn-danger' onClick={ () => decrement(1) }>-1</button>
             <button className='btn btn-primary' onClick={ () => setShow(!show) }>Show/Hide { JSON.stringify(show) }</button>
+            <hr />
         </>
     )
 

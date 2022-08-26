@@ -8,12 +8,9 @@ import { CustomHooks } from './ejemplos';
 import { RefComponent } from './useref/RefComponent';
 import { LayoutComponent } from './uselayouteffect/LayoutComponent';
 import { MemoComponent, MemoHook } from './memos';
+import { CallbackHook } from './memos/CallbackHook';
 
 import './index.css';
-
-
-
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -28,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <LayoutComponent />
     <MemoComponent />
     <MemoHook />
+    <CallbackHook />
   </>
   </React.StrictMode>
 )
