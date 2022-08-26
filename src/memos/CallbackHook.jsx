@@ -23,6 +23,7 @@ export const CallbackHook = () => {
             <h1>Callback hook: { counter }</h1>            
             <hr />
             <ShowIncrement increment={ increment }/>
+            <hr />
         </>
 
     )

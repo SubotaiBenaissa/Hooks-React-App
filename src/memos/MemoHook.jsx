@@ -5,14 +5,14 @@ import { useState, useMemo } from 'react';
 
 const heavyStuff = ( item = 1000 ) => {
     for( let i = 0; i < item; i++ ) {
-        console.log('Me gusta el chocolate');
+        // console.log('Me gusta el chocolate');
     }
     return `${item} hechas xd`
 }
 
 export const MemoHook = () => {
 
-    const { counter, increment, decrement } = useCounter(400);
+    const { counter, increment, decrement } = useCounter(44);
     const [ show, setShow ] = useState(true);
 
     const memoValue = useMemo(() => heavyStuff(counter), [counter]);     //Siempre que no cambie counter se memoriza el valor devuelto por la función heavyStuff

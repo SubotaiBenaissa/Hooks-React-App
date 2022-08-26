@@ -11,6 +11,7 @@ import { MemoComponent, MemoHook } from './memos';
 import { CallbackHook } from './memos/CallbackHook';
 
 import './index.css';
+import { Padre } from './07-tarea-memo/Padre';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -26,6 +27,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MemoComponent />
     <MemoHook />
     <CallbackHook />
+    <Padre />
   </>
   </React.StrictMode>
 )
