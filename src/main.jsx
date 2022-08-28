@@ -10,10 +10,10 @@ import { LayoutComponent } from './uselayouteffect/LayoutComponent';
 import { MemoComponent, MemoHook } from './memos';
 import { CallbackHook } from './memos/CallbackHook';
 import { Padre } from './07-tarea-memo/Padre';
+import { TodoComponent } from './reducer/TodoComponent';
 
 import './reducer/introReducer';
 import './index.css';
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -30,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <MemoHook />
     <CallbackHook />
     <Padre />
+    <TodoComponent />
   </>
   </React.StrictMode>
 )

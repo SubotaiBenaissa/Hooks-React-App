@@ -35,6 +35,7 @@ export const Padre = () => {
                 ))
             }
             {/* <Hijo /> */}
+        <hr />
         </div>
     )
 }

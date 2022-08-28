@@ -46,7 +46,6 @@ export const FormHook = () => {
             <button onClick={ onResetForm } className='btn btn-warning mt-2'>
                 Reset
             </button>
-
             <hr />
         </>
 
