@@ -2,9 +2,8 @@
 export const todoReducer = ( intialState = [], action ) => {
 
     switch( action.type ) {
-        case 'ABC':
-            return intialState
-            break;
+        case 'add todo':
+            return [...intialState, action.payload]
         default: 
             return intialState
     }
