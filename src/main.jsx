@@ -9,9 +9,11 @@ import { RefComponent } from './useref/RefComponent';
 import { LayoutComponent } from './uselayouteffect/LayoutComponent';
 import { MemoComponent, MemoHook } from './memos';
 import { CallbackHook } from './memos/CallbackHook';
-
-import './index.css';
 import { Padre } from './07-tarea-memo/Padre';
+
+import './reducer/introReducer';
+import './index.css';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
