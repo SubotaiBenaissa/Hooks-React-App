@@ -1,8 +1,7 @@
 import React from 'react'
 import { TodoItem } from './TodoItem'
 
-export const TodoList = ({ todos = [], onRemoveTodo }) => {
-
+export const TodoList = ({ todos = [], onRemoveTodo, onToggleTodo }) => {
 
 
     return (
@@ -10,7 +9,7 @@ export const TodoList = ({ todos = [], onRemoveTodo }) => {
         <ul className="list-group">
         {
             todos.map( (todo) => (
-                <TodoItem key={todo.id} todo={todo} onRemoveTodo={ onRemoveTodo }/>   // acá se manda la referencia de la función de borrar todo del componente padre
+                <TodoItem key={todo.id} todo={todo} onRemoveTodo={ onRemoveTodo } onToggleTodo={ onToggleTodo }/>   // acá se manda la referencia de la función de borrar todo del componente padre
             ) )
         }
         </ul>
