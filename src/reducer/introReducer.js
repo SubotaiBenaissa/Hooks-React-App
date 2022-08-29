@@ -30,4 +30,4 @@ let todos = todoReducer();                                            // Se llam
 
 todos = todoReducer(todos, addTodoAction);                            // Se le pasan como parámetros el state y la acción a realizar, en este caso addTodoAction
 
-console.log(todos)
+// console.log(todos)
