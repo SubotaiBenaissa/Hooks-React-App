@@ -58,7 +58,11 @@ export const useTodo = ( initialState = [] ) => {
         todos,
         handleNewTodo,
         onDeleteTodo,
-        handleToggleTodo
+        handleToggleTodo,
+        allTodos: todos.length,
+        pendingTodos: todos.filter((todo) => !todo.done).length
     }                                          // Se mandan todos los métodos del hook useTodo que se usarán
     
 }
+
+

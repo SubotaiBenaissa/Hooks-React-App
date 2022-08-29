@@ -1,16 +1,16 @@
 import React from 'react'
-import { TodoAdd } from './TodoAdd'
-import { TodoList } from './TodoList'
-import { useTodo } from '../hooks/useTodo'
+import { TodoAdd } from './TodoAdd';
+import { TodoList } from './TodoList';
+import { useTodo } from '../hooks';
 
 
 export const TodoComponent = () => {
 
-    const { todos, onDeleteTodo, handleNewTodo, handleToggleTodo } = useTodo();
+    const { todos, onDeleteTodo, handleNewTodo, handleToggleTodo, allTodos, pendingTodos } = useTodo();
 
     return (
         <>
-            <h1>Todo app: 10 <small>pendientes: 2</small></h1>
+            <h1>Todo app: { allTodos } <small>pendientes: { pendingTodos }</small></h1>
             <div className='row'>
                 <div className='col-7'>
                     <TodoList todos={ todos } onRemoveTodo={ onDeleteTodo } onToggleTodo={ handleToggleTodo }/>
