@@ -21,6 +21,7 @@ export const TodoComponent = () => {
                     <TodoAdd onNewTodo={ handleNewTodo }/>
                 </div>
             </div>
+            <hr />
         </>
     )
 }
