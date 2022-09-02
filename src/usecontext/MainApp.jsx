@@ -1,6 +1,7 @@
 import React from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import { AboutPage } from './AboutPage'
+import { UserProvider } from './context/UserProvider'
 import { HomePage } from './HomePage'
 import { LoginPage } from './LoginPage'
 import { NavbarComponent } from './NavbarComponent'
@@ -8,9 +9,9 @@ import { NavbarComponent } from './NavbarComponent'
 export const MainApp = () => {
 
     return (
-        <>
+        <UserProvider>
             <h1>Main app</h1>
-            {/*<a href="/">Home</a>*/}                                {/* Hacer la navegación de esta forma genera un full refresh de la app */}
+            {/*<a href="/">Home</a>*/}{/* Hacer la navegación de esta forma genera un full refresh de la app */}
             <NavbarComponent />
             <hr />
 
@@ -22,7 +23,7 @@ export const MainApp = () => {
                 <Route path='/*' element={ <Navigate to='/'/> }/>   
                 {/* Otra forma de manejar rutas no existentes, en este caso usando navigate que con el parámetro "to" lleva a otra ruta especificada */}
             </Routes>
-        </>
+        </UserProvider>
     )
 
 }
