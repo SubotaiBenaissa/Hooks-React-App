@@ -5,7 +5,7 @@ import { UserContext } from './context/UserContext';
 export const LoginPage = () => {
 
     const { Hola, user } = useContext( UserContext );
-    console.log( Hola );
+    // console.log( Hola );
 
     return (
         <>
@@ -14,6 +14,7 @@ export const LoginPage = () => {
             <pre>
                 { JSON.stringify( user, null, 3 ) } 
             </pre>
+
         </>
     )
 
